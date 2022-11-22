@@ -11,16 +11,16 @@ final class StaticTableViewController: UITableViewController {
     struct SettingItem {
         let title: String
         let imageName: String
-        let isOn: Bool? = nil
+        let isOn: Bool?
     }
     
     var data: [[SettingItem]] = [
         [
-            SettingItem(title: "Notification", imageName:  "" ) ,
-            SettingItem(title: "Hide close", imageName:  "" )
+            SettingItem(title: "Notification", imageName:  "", isOn: true) ,
+            SettingItem(title: "Hide close", imageName:  "", isOn: false)
         ],[
-            SettingItem(title: "Member list", imageName:  ""),
-            SettingItem(title: "Asset list", imageName:  "")
+            SettingItem(title: "Member list", imageName:  "", isOn: nil),
+            SettingItem(title: "Asset list", imageName:  "", isOn: nil)
         ]
     ]
     
@@ -69,9 +69,9 @@ extension StaticTableViewController {
             cell.textLabel?.text = model.title
             cell.onSwitch.isOn = model.isOn ?? false
             switch indexPath.row {
-            case 1:
+            case 0:
                 cell.onSwitch.addTarget(self, action: #selector(handleNotification(_:)), for: .valueChanged)
-            case 2:
+            case 1:
                 cell.onSwitch.addTarget(self, action: #selector(handleHideShow(_:)), for: .valueChanged)
             default:
                 print("not a valid row")

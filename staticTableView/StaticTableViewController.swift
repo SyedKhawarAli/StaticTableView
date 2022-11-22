@@ -11,18 +11,13 @@ final class StaticTableViewController: UITableViewController {
     struct SettingItem {
         let title: String
         let imageName: String
+        let isOn: Bool? = nil
     }
     
-    struct SettingItemTwo {
-        let title: String
-        let imageName: String
-        let isOn: Bool = false
-    }
-    
-    var data: [[Any]] = [
+    var data: [[SettingItem]] = [
         [
-            SettingItemTwo(title: "Notification", imageName:  "" ) ,
-            SettingItemTwo(title: "Hide close", imageName:  "" )
+            SettingItem(title: "Notification", imageName:  "" ) ,
+            SettingItem(title: "Hide close", imageName:  "" )
         ],[
             SettingItem(title: "Member list", imageName:  ""),
             SettingItem(title: "Asset list", imageName:  "")
@@ -67,12 +62,12 @@ extension StaticTableViewController {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let model = data[indexPath.section][indexPath.row]
         switch indexPath.section {
         case 0:
             let cell = SwitchCell()
-            let model = data[indexPath.section][indexPath.row] as?  SettingItemTwo
-            cell.textLabel?.text = model?.title
-            cell.onSwitch.isOn = model?.isOn ?? false
+            cell.textLabel?.text = model.title
+            cell.onSwitch.isOn = model.isOn ?? false
             switch indexPath.row {
             case 1:
                 cell.onSwitch.addTarget(self, action: #selector(handleNotification(_:)), for: .valueChanged)
@@ -85,8 +80,7 @@ extension StaticTableViewController {
             return cell
         case 1:
             let cell = NormalCell()
-            let model = data[indexPath.section][indexPath.row] as? SettingItem
-            cell.textLabel?.text = model?.title
+            cell.textLabel?.text = model.title
             return cell
         default:
             print("not a valid section")

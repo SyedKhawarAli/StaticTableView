@@ -14,6 +14,7 @@
 		8F1DF1DC292BB1930053158D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8F1DF1DB292BB1930053158D /* Assets.xcassets */; };
 		8F1DF1DF292BB1930053158D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8F1DF1DD292BB1930053158D /* LaunchScreen.storyboard */; };
 		8F1DF1E7292BB1D40053158D /* StaticTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F1DF1E6292BB1D40053158D /* StaticTableViewController.swift */; };
+		8FDA6D8A292E4ACA009293EA /* StaticTableViewWithEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FDA6D89292E4ACA009293EA /* StaticTableViewWithEnum.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		8F1DF1DE292BB1930053158D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8F1DF1E0292BB1930053158D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8F1DF1E6292BB1D40053158D /* StaticTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StaticTableViewController.swift; sourceTree = "<group>"; };
+		8FDA6D89292E4ACA009293EA /* StaticTableViewWithEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StaticTableViewWithEnum.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +63,7 @@
 				8F1DF1D2292BB1910053158D /* AppDelegate.swift */,
 				8F1DF1D4292BB1910053158D /* SceneDelegate.swift */,
 				8F1DF1E6292BB1D40053158D /* StaticTableViewController.swift */,
+				8FDA6D89292E4ACA009293EA /* StaticTableViewWithEnum.swift */,
 				8F1DF1D6292BB1910053158D /* ViewController.swift */,
 				8F1DF1D8292BB1910053158D /* Main.storyboard */,
 				8F1DF1DB292BB1930053158D /* Assets.xcassets */,
@@ -143,6 +146,7 @@
 			files = (
 				8F1DF1D7292BB1910053158D /* ViewController.swift in Sources */,
 				8F1DF1E7292BB1D40053158D /* StaticTableViewController.swift in Sources */,
+				8FDA6D8A292E4ACA009293EA /* StaticTableViewWithEnum.swift in Sources */,
 				8F1DF1D3292BB1910053158D /* AppDelegate.swift in Sources */,
 				8F1DF1D5292BB1910053158D /* SceneDelegate.swift in Sources */,
 			);

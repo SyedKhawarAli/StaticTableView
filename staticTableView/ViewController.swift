@@ -9,7 +9,7 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    let tableViewController = StaticTableViewController(style: .grouped)
+    let tableViewController = StaticTableViewWithEnum(style: .plain)
     
     override func viewDidLoad() {
         super.viewDidLoad()
